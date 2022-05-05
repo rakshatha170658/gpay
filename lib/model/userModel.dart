@@ -4,7 +4,7 @@ class UserModel {
   UserModel({
     this.name,
     this.imgUrl,
-  });
+  }); 
 }
 
 List<UserModel> dummyData = [

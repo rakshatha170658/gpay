@@ -7,12 +7,11 @@ import 'cash_components/cash_utils.dart';
 import 'header_components/business_header.dart';
 import 'header_components/header_widget.dart';
 import 'header_components/people_header.dart';
-import 'header_components/promotion_header.dart';
 import 'header_components/scroll_handle.dart';
-import 'invite_components/invite_section.dart';
 import 'promotion_components/promotion_data.dart';
 import 'user_components/load_more.dart';
 import 'user_components/userDetails.dart';
+
 
 class GooglePayHome extends StatefulWidget {
   @override
@@ -75,13 +74,7 @@ class _GooglePayHomeState extends State<GooglePayHome> {
                           SizedBox(height: 30),
                           Separator(),
                           SizedBox(height: 30),
-                          PromotionHeader(),
-                          SizedBox(height: 20),
-                          PromotionData(),
-                          SizedBox(height: 50),
-                          CashUtils(),
-                          SizedBox(height: 50),
-                          InviteSection(),
+                      
                         ],
                       ),
                     );

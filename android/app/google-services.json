@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "642465210061",
+    "project_id": "gpay-ff4f4",
+    "storage_bucket": "gpay-ff4f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642465210061:android:7bf50250565067b27d5384",
+        "android_client_info": {
+          "package_name": "com.example.google_pay_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642465210061-ss9n2qinchlca336lcg39p3pq7lfhgiu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpARUws8N3FYBCMHDUH8Y_7q5pAYaTT0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642465210061-ss9n2qinchlca336lcg39p3pq7lfhgiu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_pay_ui/components/Payment_Screen/payment.dart';
 import 'package:google_pay_ui/model/userModel.dart';
 
 class UserDetails extends StatelessWidget {
@@ -21,9 +22,19 @@ class UserDetails extends StatelessWidget {
           return GridTile(
             child: Column(
               children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(dummyData[i].imgUrl),
-                  radius: 30,
+                GestureDetector(
+                  onTap: () => {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Payment(
+                                name: dummyData[i].name,
+                                url: dummyData[i].imgUrl)))
+                  },
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(dummyData[i].imgUrl),
+                    radius: 30,
+                  ),
                 ),
                 SizedBox(height: 2),
                 Text(

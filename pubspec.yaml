@@ -26,6 +26,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   dashed_circle: ^0.0.1
   flutter_dash: ^0.0.1
+  cloudfirestore: 
 
 dev_dependencies:
   flutter_test:

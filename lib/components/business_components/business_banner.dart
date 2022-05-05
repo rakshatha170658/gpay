@@ -38,18 +38,6 @@ class BusinessBanner extends StatelessWidget {
                   padding: EdgeInsets.only(left: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Icon(
-                        Icons.drive_eta_rounded,
-                        color: Colors.blue[700],
-                        size: 40,
-                      ),
-                      Icon(
-                        Icons.local_gas_station,
-                        color: Colors.blue[200],
-                        size: 40,
-                      ),
-                    ],
                   ),
                 ),
               ],
