@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_pay_ui/components/PaymentDone_Screen/payment_done.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Transaction extends StatefulWidget {
   final name;
@@ -11,7 +14,10 @@ class Transaction extends StatefulWidget {
 }
 
 class _TransactionState extends State<Transaction> {
+  CollectionReference transaction =
+      FirebaseFirestore.instance.collection("transactions");
   var rupees = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,10 +82,19 @@ class _TransactionState extends State<Transaction> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
+        onPressed: () async {
+          var rng = Random();
+          await transaction.add({
+            'from': 'John',
+            'to': widget.name,
+            'time': DateTime.now().toUtc().toString().split('.')[0],
+            'price': rupees,
+            'transId': rng.nextInt(10000000000)
+          }).then((value) => print("USers added"));
           if (rupees == '') {
             SnackBar(content: Text("Please Enter At least 1Rs"));
           } else {
+            print(rupees);
             Navigator.push(
                 context,
                 MaterialPageRoute(
