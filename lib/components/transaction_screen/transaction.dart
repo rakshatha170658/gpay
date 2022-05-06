@@ -86,10 +86,9 @@ class _TransactionState extends State<Transaction> {
           var rng = Random();
           await transaction.add({
             'from': 'John',
-            'to': widget.name,
+            'to': widget.name.toString(),
             'time': DateTime.now().toUtc().toString().split('.')[0],
             'price': rupees,
-            'transId': rng.nextInt(10000000000)
           }).then((value) => print("USers added"));
           if (rupees == '') {
             SnackBar(content: Text("Please Enter At least 1Rs"));
